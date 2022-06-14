@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title>미니게임</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/def.css">
+    <link rel="stylesheet" type="text/css" href="./css/site_css.css">
+	<script src="./js/jquery.min.js"></script>
+    <script src="./js/site_js.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="./css/p08.css">
+    <script src="./js/p08.js"></script>
+</head>
+<body>
+    <header class="head_araa"> 
+        <div class="box_style1 dis_f al_c flex_jsb">
+            <h1>MSG</h1>
+            <nav>
+                <ul class="dis_f al_c">
+                    <li>스타일1</li>
+                    <li>스타일2</li>
+                    <li>스타일3</li>
+                </ul>
+                <button class="pc_h md_pop_close">닫기</button>
+            </nav>
+
+            <div class="md_footer pc_h">
+                <p>
+                    유사콜론<br/>
+                    20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+                </p>
+            </div>
+        </div> 
+        <button class="pc_h md_pop_show">메뉴</button>
+    </header>
+
+    <section id="main_section" class="dis_f al_c">
+        <div class="box_style1 play_area_box" id="game_t6">
+            <div class="play_area">
+                <div class="layer1 dis_f flex_c" id="game_start" style="display:none;">
+                    <div>
+                        <h2 class="t_c">햄버거 게임</h2>
+                        <button class="start_btn" onclick="game_start()">시작</button>
+                    </div>
+                </div>
+
+                <div class="layer1" id="game_play" style="display:none;">
+                    <div class="game_view">
+                        <div class="time_box">
+                            <img src="./img/p06/time_img.png">
+                            <div class="time_bar"><div></div></div>
+                        </div>
+                        <p class="score_area">Score : <span class="score_text">0</span></p>
+                        <div class="quest_area">
+                            <p class="t_c">주문</p>
+                            <ul class="burger_list">
+                                <li class="burger_t1"><div></div></li>
+                                <li class="burger_t2" style="bottom:10px;"><div></div></li>
+                                <li class="burger_t3" style="bottom:20px;"><div></div></li>
+                                <li class="burger_t4" style="bottom:30px;"><div></div></li>
+                                <li class="burger_t5" style="bottom:40px;"><div></div></li>
+                                <li class="burger_t1" style="bottom:50px;"><div></div></li>
+                            </ul>
+                        </div>
+
+                        <div class="burger_area">
+                            <ul class="burger_list" id="play_area">
+                                
+                            </ul>
+                            <div class="bg_area2">
+                                <div class="plate"></div>
+                                <div class="hand"></div>
+                            </div>
+                        </div>
+                        <div class="bg_area"></div>
+                    </div>
+                    <div class="game_ctr dis_f flex_jc">
+                        <ul class="dis_f">
+                            <li onclick="burger_event1(1)"><img src="./img/p06/img_1.png"></li>
+                            <li onclick="burger_event1(2)"><img src="./img/p06/img_2.png"></li>
+                            <li onclick="burger_event1(3)"><img src="./img/p06/img_3.png"></li>
+                            <li onclick="burger_event1(4)"><img src="./img/p06/img_4.png"></li>
+                            <li onclick="burger_event1(5)"><img src="./img/p06/img_5.png"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="layer1 dis_f flex_c" id="game_over">
+                    <div class="popup_area t_c" id="score_popup"  style="display:none;">
+                        <h3 class="mb10">GAME OVER</h3>
+                        <p class="mb10">점수 : <span class="score_text">0</span></p>
+                        <button class="restart_btn">다시하기</button>
+                        <button class="rank_btn">랭킹보기</button>
+                    </div>
+                    <div class="popup_area t_c" id="rank_popup">
+                        <h3>랭킹</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="box_style1 dis_f al_c">
+            <p>
+                유사콜론<br/>
+                20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+            </p>
+        </div>
+    </footer>
+
+    <div class="pop_gr pc_h"></div>
+</body>

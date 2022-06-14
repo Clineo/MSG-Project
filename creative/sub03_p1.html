@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <title>미니게임</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/def.css">
+    <link rel="stylesheet" type="text/css" href="./css/site_css.css">
+	<script src="./js/jquery.min.js"></script>
+    <script src="./js/site_js.js"></script>
+</head>
+<script>
+    var distance = 0;
+    var velocity = 10;
+    $(function(){
+        $('#start_btn').click(function(){
+            $('.layer1').hide();
+            $('.g1').show();
+        });
+        setInterval(function() {
+            $('.ball').animate({bottom: distance});
+            distance += velocity;
+        }, 1000);        
+    });
+</script>
+<body>
+    <header class="head_araa"> 
+        <div class="box_style1 dis_f al_c flex_jsb">
+            <h1>MSG</h1>
+            <nav>
+                <ul class="dis_f al_c">
+                    <li>스타일1</li>
+                    <li>스타일2</li>
+                    <li>스타일3</li>
+                </ul>
+                <button class="pc_h md_pop_close">닫기</button>
+            </nav>
+
+            <div class="md_footer pc_h">
+                <p>
+                    유사콜론<br/>
+                    20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+                </p>
+            </div>
+        </div> 
+        <button class="pc_h md_pop_show">메뉴</button>
+    </header>
+
+    <section id="main_section" class="dis_f al_c">
+        <div class="box_style1 play_area_box" id="game_t1">
+            <div class="play_area">
+                <div class="layer1" id="game_play">
+                    <style>
+                        .layer1 #start_txt{
+                            text-align:center;
+                            margin-top: 50%;
+                            font-size: 50px;
+                        }
+                        .layer1 #start_btn{
+                            text-decoration: none;
+                            margin-top: 20%;
+                            margin-left: 35%;
+                            border-radius: 10%;
+                            font-size: 35px;
+                        }
+                        .g1{
+                            text-align: center    
+                        }
+                        .g1 #pitcher{
+                            margin: 35% 0 0 0;
+                            
+                        }
+                        .g1 #ball{
+                            position:absolute;
+                            align-items: center;
+                        }
+                        .g1 #hitter{
+                            margin: 90% 0 0 0;
+                        }
+                    </style>
+                    <div id = "start_txt">게임시작</div>
+                    <button id = "start_btn">Start</button>
+                </div>
+                <div class="g1" style="display:none">
+                    <li id = "pitcher">투수</li>
+                    <li id = "ball">공</li>
+                    <li id = "hitter">타자</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="box_style1 dis_f al_c">
+            <p>
+                유사콜론<br/>
+                20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+            </p>
+        </div>
+    </footer>
+
+    <div class="pop_gr pc_h"></div>
+</body>
